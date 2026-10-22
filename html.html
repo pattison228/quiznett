@@ -1,72 +1,62 @@
+﻿
 <!DOCTYPE html>
 <html lang="no">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="author" content="Maksym Dmytrenko">
-    <meta name="description" content="This page contains all the things I am learning how to create as I learn HTML.">
-    <title>Dette er min første HTML-side.</title>
-    <link rel="icon" href="QN.png" type="image/x-icon">
-    <link rel="stylesheet" href="main.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Quiz</title>
+    <link rel="icon" href="IT.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
-
 <body>
+
     <header>
-
-        <a href="html2.html" class="button2">Owner</a><h1 class="hoved"> QUIZNETT </h1>
-
-        <p> &nbsp;&nbsp;&nbsp;</p>
-
+        <h1>IT QUIZ</h1>
+        <p>Test kunnskapen din om IT og teknologi!</p>
+        <a href="index.html" class="button2">Hoved side</a>
     </header>
-    <style>
-        header {
-            height: 156.8px;
-        }
-    </style>
 
+    <main class="container">
+        <section id="start-screen" class="card">
+            <h2>Velkommen til IT Quiz!</h2>
+            <hr>
+            <p>
+                Her kan du teste kunnskapen din om datamaskiner,
+                nettverk og teknologi.
+            </p>
+            <p>Quizen inneholder 10 spørsmål.</p>
+            <button id="start-btn">Start quiz </button>
+        </section>
 
-    <div class="main">
-        <hr>
+        <section id="quiz-screen" class="card hidden">
+            <div class="quiz-info">
+                <span id="question-number"></span>
+                <span id="score">Poeng: 0</span>
+            </div>
 
-        <h1 class="p1">Velkommen til QuizNett</h1>
-        <p class="p1">QuizNett er en moderne quizplattform der du kan teste kunnskapene dine på en enkel og morsom måte. Velg mellom ulike temaer, lær spennende fakta og utfordre deg selv gjennom interaktive spørsmål. Enten du ønsker å øve til skolen eller bare ha det gøy, finner du en quiz som passer for deg.</p>
-        <p>
-            <br>&nbsp;&nbsp;&nbsp;
-            <br>&nbsp;&nbsp;&nbsp;
-            <br>&nbsp;&nbsp;&nbsp;
-        </p>
-        <p>Tror du at du kan IT? Prøv IT Quiz og utfordre deg selv med spørsmål om teknologi, programmering, kunstig intelligens og datasikkerhet!</p>
-        <br>
-        <a href="index.html" class="button">IT Quiz</a>
-        <p>
-            <br>&nbsp;&nbsp;&nbsp;
-            <br>&nbsp;&nbsp;&nbsp;
-            <br>&nbsp;&nbsp;&nbsp;
-        </p>
-        <p>Er du en ekte gamer? Prøv Videospill Quiz og se hvor mye du vet om kjente spill, legendariske figurer og gaming-verdenen!</p>
-        <br>
-        <a href="html3.html" class="button">Videospill Quiz</a>
-        <p>
-            <br>&nbsp;&nbsp;&nbsp;
-            <br>&nbsp;&nbsp;&nbsp;
-            <br>&nbsp;&nbsp;&nbsp;
-        </p>
-        <p>Er du en ekte filmekspert? Test kunnskapene dine om kjente filmer, berømte karakterer, populære skuespillere og spennende filmscener. Se hvor mange riktige svar du klarer å få!</p>
-        <br>
-        <a href="html4.html" class="button">Film Quiz</a>
-        <p>
-            <br>&nbsp;&nbsp;&nbsp;
-            <br>&nbsp;&nbsp;&nbsp;
-            <br>&nbsp;&nbsp;&nbsp;
-        </p>
-        <p>Liker du å utforske verden? Test kunnskapene dine om land, hovedsteder, kontinent, flagg, elver og verdenskjente steder. Se hvor godt du kjenner vår planet!</p>
-        <br>
-        <a href="html5.html" class="button">Geografi Quiz</a>
+            <div>
+                <div id="progress"></div>
+            </div>
 
-    </div>
+            <h2 id="question"></h2>
+            <div id="answers" class="answers"></div>
+
+            <p id="feedback" aria-live="polite"></p>
+            <button id="next-btn" class="hidden">Neste spørsmål →</button>
+        </section>
+
+        <section id="result-screen" class="card hidden">
+            <h2>Quizen er ferdig!</h2>
+            <p id="final-score"></p>
+            <p id="result-message"></p>
+            <button id="restart-btn">Spill igjen </button>
+        </section>
+    </main>
+
     <footer>
-        <p>Laget av Maksym  Jørgen  Sam</p>
+        <p>IT Quiz</p>
     </footer>
-</body>
 
+</body>
 </html>

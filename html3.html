@@ -1,0 +1,62 @@
+﻿
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VS Quiz</title>
+    <link rel="icon" href="VS.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="script2.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Videospill QUIZ</h1>
+        <p>Test kunnskapen din om spill</p>
+        <a href="html.html" class="button2">Hoved side</a>  
+    </header>
+
+    <main class="container">
+        <section id="start-screen" class="card">
+            <h2>Velkommen til Videospill Quiz!</h2>
+            <hr>
+            <p>
+                Her kan du teste kunnskapen din om videospill,
+                spillutvikling og gaming.
+            </p>
+            <p>Quizen inneholder 10 spørsmål.</p>
+            <button id="start-btn">Start quiz </button>
+        </section>
+
+        <section id="quiz-screen" class="card hidden">
+            <div class="quiz-info">
+                <span id="question-number"></span>
+                <span id="score">Poeng: 0</span>
+            </div>
+
+            <div>
+                <div id="progress"></div>
+            </div>
+
+            <h2 id="question"></h2>
+            <div id="answers" class="answers"></div>
+
+            <p id="feedback" aria-live="polite"></p>
+            <button id="next-btn" class="hidden">Neste spørsmål →</button>
+        </section>
+
+        <section id="result-screen" class="card hidden">
+            <h2>Quizen er ferdig!</h2>
+            <p id="final-score"></p>
+            <p id="result-message"></p>
+            <button id="restart-btn">Spill igjen </button>
+        </section>
+    </main>
+
+    <footer>
+        <p>Videospill Quiz</p>
+    </footer>
+
+</body>
+</html>
